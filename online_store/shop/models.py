@@ -10,10 +10,10 @@ class UserProfile(AbstractUser):
     date_registered = models.DateField(auto_now=True, null=True, blank=True)
     phone_number = PhoneNumberField(null=True, blank=True, region='KG')
     STATUS_CHOICES = (
-        ('gold', 'Gold'), #75%
-        ('silver', 'Silver'), #50%
-        ('bronze', 'Bronze'), #25%
-        ('simple', 'Simple'), #...
+        ('gold', 'Gold'),
+        ('silver', 'Silver'),
+        ('bronze', 'Bronze'),
+        ('simple', 'Simple'),
     )
 
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='simple')
